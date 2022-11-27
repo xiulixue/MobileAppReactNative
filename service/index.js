@@ -31,11 +31,12 @@ const storage = require('node-persist');
     app.put('/users/:id',async(req,res)=>{
         let id = req.params.id; 
         let user = await storage.getItem(id); 
+        user.staffId = req.body.staffId;
         user.firstName = req.body.firstName; 
         user.lastName = req.body.lastName; 
         user.email = req.body.email; 
         user.phone = req.body.phone; 
-        user.age = req.body.age; 
+        user.department = req.body.department;
         user.address= req.body.address; 
         user.updated = new Date(); 
         await storage.updateItem(id,user); 

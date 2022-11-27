@@ -26,8 +26,6 @@ export default function Delete(){
         <Text style={theme.txtDetail}>{u.staffId} </Text>
         <Label value="NAME:" />
         <Text style={theme.txtDetail}>{u.firstName} {u.lastName}</Text>
-        <Label value="AGE:" />
-        <Text style={theme.txtDetail}>{u.age} </Text>
         <Label value="EMAIL:" />
         <Text style={theme.txtDetail}>{u.email} </Text>
         <Label value="PHONE:" />

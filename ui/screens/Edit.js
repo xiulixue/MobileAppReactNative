@@ -17,7 +17,6 @@ export default function Edit() {
   const [staffId, setStaffId] = useState(user.staffId);
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
-  const [age, setAge] = useState(user.age);
   const [email, setEmail] = useState(user.email);
   const [phone, setPhone] = useState(user.phone);
   const [department, setDepartment] = useState(user.department);
@@ -37,7 +36,6 @@ export default function Edit() {
       staffId,
       firstName,
       lastName,
-      age,
       email,
       phone,
       department,
@@ -58,8 +56,6 @@ export default function Edit() {
       <TxtInput value={firstName} onChangeText={setFirstName} />
       <Label value="LAST NAME:" />
       <TxtInput value={lastName} onChangeText={setLastName} />
-      <Label value="AGE:" />
-      <TextInput style={theme.txtInput} value={age} onChangeText={setAge} />
       <Label value="EMAIL:" />
       <TxtInput value={email} onChangeText={setEmail} />
       <Label value="PHONE:" />

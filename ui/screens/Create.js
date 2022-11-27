@@ -1,7 +1,7 @@
 /** @format */
 
 import { useState } from "react";
-import { Text, View, TextInput, Pressable } from "react-native";
+import { Text, View, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { addUserAsync } from "../services/user.service";
 import theme from "../style";
@@ -15,7 +15,6 @@ export default function Create() {
   const [staffId, setStaffId] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [department, setDepartment] = useState("");
@@ -35,7 +34,6 @@ export default function Create() {
       staffId,
       firstName,
       lastName,
-      age,
       email,
       phone,
       department,
@@ -56,8 +54,6 @@ export default function Create() {
       <TxtInput value={firstName} onChangeText={setFirstName} />
       <Label value="LAST NAME:" />
       <TxtInput value={lastName} onChangeText={setLastName} />
-      <Label value="AGE:" />
-      <TextInput style={theme.txtInput} value={age} onChangeText={setAge} />
       <Label value="EMAIL:" />
       <TxtInput value={email} onChangeText={setEmail} />
       <Label value="PHONE:" />

@@ -15,8 +15,6 @@ export default function Profiles(){
         <Text style={theme.txtDetail}>{u.staffId} </Text>
         <Label value="NAME:" />
         <Text style={theme.txtDetail}>{u.firstName} {u.lastName}</Text>
-        <Label value="AGE:" />
-        <Text style={theme.txtDetail}>{u.age} </Text>
         <Label value="EMAIL:" />
         <Text style={theme.txtDetail}>{u.email} </Text>
         <Label value="PHONE:" />
@@ -24,7 +22,7 @@ export default function Profiles(){
         <Label value="DEPARTMENT:" />
         <Text style={theme.txtDetail}>{u.department} </Text>
         <Label value="ADDRESS:" />
-        <Text style={theme.txtDetail}>{`${u.address.street}, ${u.address.suburb}, ${u.address.state}` }</Text>
+        <Text style={theme.txtDetail}>{`${u.address.street}, ${u.address.suburb}, ${u.address.state},${u.address.country}` }</Text>
         <Pressable  style={theme.editStaffBtn} onPress={()=>navigation.navigate("Edit",u)}>
           <Text  style={theme.editStaffBtnTxt}>Edit</Text>
         </Pressable>
