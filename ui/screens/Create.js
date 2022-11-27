@@ -5,11 +5,14 @@ import { Text, View, TextInput, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { addUserAsync } from "../services/user.service";
 import theme from "../style";
+import Label from "../components/Label";
+import TxtInput from "../components/TxtInput";
 
 export default function Create() {
   //navigation
   const navigation = useNavigation();
   //state
+  const [staffId, setStaffId] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState("");
@@ -24,11 +27,12 @@ export default function Create() {
   function submit() {
     let user = getUserObject();
     addUserAsync(user).then((json) =>
-      navigation.navigate("Index", { op: "create", data: json })
+      navigation.navigate("List", { op: "create", data: json })
     );
   }
   function getUserObject() {
     return {
+      staffId,
       firstName,
       lastName,
       age,
@@ -46,61 +50,32 @@ export default function Create() {
   //JSX
   return (
     <View>
-      <Text style={theme.label}>FIRST NAME:</Text>
-      <TextInput
-        style={theme.textInput}
-        value={firstName}
-        onChangeText={setFirstName}
-      />
-      <Text style={theme.label}>LAST NAME:</Text>
-      <TextInput
-        style={theme.textInput}
-        value={lastName}
-        onChangeText={setLastName}
-      />
-      <Text style={theme.label}>AGE:</Text>
-      <TextInput style={theme.textInput} value={age} onChangeText={setAge} />
-      <Text style={theme.label}>EMAIL:</Text>
-      <TextInput
-        style={theme.textInput}
-        value={email}
-        onChangeText={setEmail}
-      />
-      <Text style={theme.label}>PHONE:</Text>
-      <TextInput
-        style={theme.textInput}
-        value={phone}
-        onChangeText={setPhone}
-      />
-      <Text style={theme.label}>DEPARTMENT:</Text>
-      <TextInput
-        style={theme.textInput}
-        value={department}
-        onChangeText={setDepartment}
-      />
-      <Text style={theme.label}>ADDRESS:</Text>
-      <Text style={theme.label}>STREET:</Text>
-      <TextInput
-        style={theme.textInput}
-        value={street}
-        onChangeText={setStreet}
-      />
-      <Text style={theme.label}>SUBURB:</Text>
-      <TextInput
-        style={theme.textInput}
-        value={suburb}
-        onChangeText={setSuburb}
-      />
-      <Text style={theme.label}>STATE:</Text>
-      <TextInput
-        style={theme.textInput}
-        value={state}
-        onChangeText={setState}
-      />
-      <Text style={theme.label}>COUNTRY:</Text>
-      <TextInput style={theme.textInput} value={country} onChangeText={setCountry}/>
-      <Pressable style={theme.saveButton} onPress={submit}>
-      <Text style={theme.saveButtonText}>SAVE</Text>
+      <Label value="STAFF ID:" />
+      <TxtInput value={staffId} onChangeText={setStaffId} />
+      <Label value="FIRST NAME:" />
+      <TxtInput value={firstName} onChangeText={setFirstName} />
+      <Label value="LAST NAME:" />
+      <TxtInput value={lastName} onChangeText={setLastName} />
+      <Label value="AGE:" />
+      <TextInput style={theme.txtInput} value={age} onChangeText={setAge} />
+      <Label value="EMAIL:" />
+      <TxtInput value={email} onChangeText={setEmail} />
+      <Label value="PHONE:" />
+      <TxtInput value={phone} onChangeText={setPhone} />
+      <Label value="DEPARTMENT:" />
+      <TxtInput value={department} onChangeText={setDepartment} />
+      <Label value="ADDRESS:" />
+      <Label value="STREET:" />
+      <TxtInput value={street} onChangeText={setStreet} />
+      <Label value="SUBURB:" />
+      <TxtInput value={suburb} onChangeText={setSuburb} />
+      <Label value="STATE:" />
+      <TxtInput value={state} onChangeText={setState} />
+      <Label value="COUNTRY:" />
+      <TxtInput value={country} onChangeText={setCountry} />
+
+      <Pressable style={theme.saveBtn} onPress={submit}>
+        <Text style={theme.saveBtnTxt}>SAVE</Text>
       </Pressable>
     </View>
   );

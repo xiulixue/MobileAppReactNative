@@ -1,8 +1,7 @@
-//import {useEffect,useState} from 'react'; 
 import {Text, View,Pressable } from 'react-native';
-import {useNavigation,useRoute} from '@react-navigation/native'; 
-//import {fetchUsersAsync} from '../services/user.service'
-// import User from '../components/User';
+import {Image} from 'react-native';
+import {useNavigation} from '@react-navigation/native'; 
+import logo from '../assets/logo.png';
 import theme from '../style';
 
 export default function Index(){
@@ -11,23 +10,26 @@ export default function Index(){
     
     return (
       <View>
-        <Pressable  style={theme.indexNavButton}  onPress={()=>navigation.navigate("Index")}>
-            <Text style={theme.addContactButtonText}> DASHBOARD </Text>
+        <View style={theme.logoImg}>
+          <img src={logo} alt="Logo"  />
+        </View>
+        <Pressable  style={theme.indexNavBtn}  onPress={()=>navigation.navigate("Index")}>
+            <Text style={theme.indexNavBtnTxt}> DASHBOARD </Text>
         </Pressable>
-        <Pressable  style={theme.indexNavButton}  onPress={()=>navigation.navigate("List")}>
-            <Text style={theme.indexNavButtonText}> STAFF DIRECTORY </Text>
+        <Pressable  style={theme.indexNavBtnAct}  onPress={()=>navigation.navigate("List")}>
+            <Text style={theme.indexNavBtnTxt}> STAFF DIRECTORY </Text>
         </Pressable>       
-        <Pressable  style={theme.indexNavButton}  onPress={()=>navigation.navigate("Index")}>
-            <Text style={theme.indexNavButtonText}> TASK </Text>
+        <Pressable  style={theme.indexNavBtn}  onPress={()=>navigation.navigate("Index")}>
+            <Text style={theme.indexNavBtnTxt}> TASK </Text>
         </Pressable>       
-        <Pressable  style={theme.indexNavButton}  onPress={()=>navigation.navigate("Index")}>
-            <Text style={theme.indexNavButtonText}> ACTIVITY </Text>
+        <Pressable  style={theme.indexNavBtn}  onPress={()=>navigation.navigate("Index")}>
+            <Text style={theme.indexNavBtnTxt}> ACTIVITY </Text>
         </Pressable> 
-        <Pressable  style={theme.indexNavButton}  onPress={()=>navigation.navigate("Index")}>
-            <Text style={theme.indexNavButtonText}> SETTING </Text>
+        <Pressable  style={theme.indexNavBtn}  onPress={()=>navigation.navigate("Index")}>
+            <Text style={theme.indexNavBtnTxt}> SETTING </Text>
         </Pressable>
-        <Pressable  style={theme.indexNavButton}  onPress={()=>navigation.navigate("Index")}>
-            <Text style={theme.indexNavButtonText}> LOG OUT </Text>
+        <Pressable  style={theme.indexNavBtn}  onPress={()=>navigation.navigate("Index")}>
+            <Text style={theme.indexNavBtnTxt}> LOG OUT </Text>
         </Pressable>
       </View>
     ); 

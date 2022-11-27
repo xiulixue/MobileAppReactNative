@@ -1,74 +1,143 @@
 import {StyleSheet} from 'react-native'; 
 //https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 const theme = StyleSheet.create({
-    label:{
-        fontWeight:'bold'
+    //logo
+    logoImg:{
+        margin:5,
+        marginBottom:10,
     },
-    userTile:{
+
+    //index page 
+    indexNavBtn:{
+        backgroundColor:'#c64c38',
+        padding:5,
+        margin:5,
+        marginTop:10,
+        borderRadius:5,
+    },
+    indexNavBtnTxt:{
+        fontFamily:'Trebuchet',
+        color:'#fff',
+        textAlign:'center'
+    },
+    indexNavBtnAct:{
+        backgroundColor:'#941a1d',
+        padding:5,
+        margin:5,
+        marginTop:10,
+        borderRadius:5,
+    },
+
+
+    //list page
+    addStaffBtn:{
+        backgroundColor:'#941a1d',
+        borderRadius:5,
+        padding:5,
+        margin:5,
+        marginBottom:5,
+    },
+    addStaffBtnTxt:{
+        fontFamily:'Trebuchet',
+        color:'#fff',
+        textAlign:'center'
+    },
+    listRow:{
         display:'flex',
         flexDirection:'row',
         justifyContent:'space-between',
-        borderWidth:1,
-        borderColor:'#000',
-        borderRadius:2,
+        backgroundColor:'#D9D9D9',
+        borderRadius:5,
         padding:5,
         margin:5
     },
-    userTileButtonContainer:{
+    listRowBtnContainer:{
         display:'flex',
         flexDirection:'row',
-        justifyContent:'space-between'
+        justifyContent:'flex-end'
     },
-    userTileButton:{
-        backgroundColor:'grey',
+    listRowBtn:{
+        backgroundColor:'#cb6d4f',
         padding:5,
         marginLeft:2.5,
         minWidth:55,
-        borderRadius:2,
+        borderRadius:5,
     },
-    userTileButtonText:{
+    listRowBtnTxt:{
+        fontFamily:'Trebuchet',
+        color:'#fff',
+        textAlign:'center'
+    },
+    
+    //Create new staff page
+    label:{
+        fontFamily:'Trebuchet',
+        fontWeight:'bold',
+        padding:2.5,
+        marginTop:2.5,
+    },
+    txtInput:{
+        backgroundColor:'#ffffff',
+        borderColor:'#000',
+        borderWidth:1,
+        margin:2.5,
+        padding:2.5
+    },
+    saveBtn:{
+        backgroundColor:'#cb6d4f',
+        padding:5,
+        marginTop:10,
+        marginLeft:65,
+        marginRight:65,
+        borderRadius:5,
+    },
+    saveBtnTxt:{
         fontFamily:'Trebuchet',
         color:'#fff',
         textAlign:'center'
     },
 
-    addContactButton:{
-        backgroundColor:'#941a1d',
-        borderRadius:2,
-        padding:5
-    },
-    addContactButtonText:{
+    //staff profiles page
+    txtDetail:{
+        backgroundColor:'#ffffff',
+        margin:2.5,
+        padding:2.5,
+        borderRadius:5,
         fontFamily:'Trebuchet',
-        color:'#fff',
-        textAlign:'center'
     },
-    indexNavButton:{
-        backgroundColor:'#941a1d',
+
+    //edit profiles page
+    editStaffBtn:{
+        backgroundColor:'#cb6d4f',
+        borderRadius:5,
         padding:5,
-        margin:5,
-        marginTop:10
+        marginTop:10,
+        marginLeft:65,
+        marginRight:65,
+        borderRadius:5,
     },
-    indexNavButtonText:{
+    editStaffBtnTxt:{
         fontFamily:'Trebuchet',
         color:'#fff',
         textAlign:'center'
     },
+
+    //delete staff page
     deleteStaffBtn:{
         backgroundColor:'red',
         padding:5,
-        marginTop:10
+        marginTop:10,
+        marginLeft:65,
+        marginRight:65,
+        borderRadius:5,
     },
     deleteStaffBtnTxt:{
         fontFamily:'Trebuchet',
         color:'#fff',
-        textAlign:'center'
+        textAlign:'center',
+        
     },
-    deleteStaffLabel:{
-        // backgroundColor:'red',
-        padding:5,
-        marginTop:10
-    },
-    deleteStaffLabelTxt:{
+    deleteStaffNtfTxt:{
         fontFamily:'Trebuchet',
         color:'red',
         textAlign:'center',
@@ -76,61 +145,10 @@ const theme = StyleSheet.create({
         borderColor:'red',
         borderWidth:1,
         padding:5,
-        marginTop:20
-    },
-    
-    editStaffBtn:{
-        backgroundColor:'grey',
-        padding:5,
-        marginTop:10
-    },
-    editStaffBtnTxt:{
-        fontFamily:'Trebuchet',
-        color:'#fff',
-        textAlign:'center'
-    },
-    saveButton:{
-        backgroundColor:'grey',
-        padding:5,
-        marginTop:10
-    },
-    saveButtonText:{
-        fontFamily:'Trebuchet',
-        color:'#fff',
-        textAlign:'center'
-    },
-    cancelButton:{
-        backgroundColor:'white',
-        padding:5,
-        marginTop:5
-    },
-    cancelButtonText:{
-        fontFamily:'Trebuchet',
-        color:'#fff',
-        textAlign:'center'
-    },  
-    textInput:{
-        backgroundColor:'#fff',
-        borderColor:'#000',
-        borderWidth:1,
-        margin:2.5,
-        padding:2.5
-    },
-    line: {
-        flexDirection: "row",
-        paddingTop: 3,
-        paddingBottom: 3,
-        borderWidth: 0,
-        borderColor: "#C5C5C5"
-    },
-    cell: {
-        fontFamily:'Trebuchet',
-        fontSize: 18,
-        paddingLeft: 5
-    },
-    content: {
-        flex: 3
-    }
+        marginTop:20,
+        borderRadius:5,
+    }, 
+
 }); 
 
 export default theme; 

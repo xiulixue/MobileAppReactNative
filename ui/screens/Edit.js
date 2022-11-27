@@ -14,6 +14,7 @@ export default function Edit() {
   const route = useRoute();
   const user = route.params;
   //state
+  const [staffId, setStaffId] = useState(user.staffId);
   const [firstName, setFirstName] = useState(user.firstName);
   const [lastName, setLastName] = useState(user.lastName);
   const [age, setAge] = useState(user.age);
@@ -33,7 +34,8 @@ export default function Edit() {
   function getUserObject() {
     return {
       id: user.id,
-      firstName: firstName,
+      staffId,
+      firstName,
       lastName,
       age,
       email,
@@ -50,29 +52,32 @@ export default function Edit() {
   //JSX
   return (
     <View>
+      <Label value="STAFF ID:" />
+      <TxtInput value={staffId} onChangeText={setStaffId} />
       <Label value="FIRST NAME:" />
       <TxtInput value={firstName} onChangeText={setFirstName} />
       <Label value="LAST NAME:" />
       <TxtInput value={lastName} onChangeText={setLastName} />
       <Label value="AGE:" />
-      <TxtInput value={age} onChangeText={setAge} />
-      <Text style={theme.label}>EMAIL:</Text>
+      <TextInput style={theme.txtInput} value={age} onChangeText={setAge} />
+      <Label value="EMAIL:" />
       <TxtInput value={email} onChangeText={setEmail} />
-      <Text style={theme.label}>PHONE:</Text>
+      <Label value="PHONE:" />
       <TxtInput value={phone} onChangeText={setPhone} />
-      <Text style={theme.label}>DEPARTMENT:</Text>
+      <Label value="DEPARTMENT:" />
       <TxtInput value={department} onChangeText={setDepartment} />
-      <Text style={theme.label}>ADDRESS:</Text>
-      <Text style={theme.label}>STREET:</Text>
+      <Label value="ADDRESS:" />
+      <Label value="STREET:" />
       <TxtInput value={street} onChangeText={setStreet} />
-      <Text style={theme.label}>SUBURB:</Text>
+      <Label value="SUBURB:" />
       <TxtInput value={suburb} onChangeText={setSuburb} />
-      <Text style={theme.label}>STATE:</Text>
+      <Label value="STATE:" />
       <TxtInput value={state} onChangeText={setState} />
-      <Text style={theme.label}>COUNTRY:</Text>
+      <Label value="COUNTRY:" />
       <TxtInput value={country} onChangeText={setCountry} />
-      <Pressable style={theme.saveButton} onPress={submit}>
-        <Text style={theme.saveButtonText}>SAVE</Text>
+
+      <Pressable style={theme.saveBtn} onPress={submit}>
+        <Text style={theme.saveBtnTxt}>SAVE</Text>
       </Pressable>
     </View>
   );

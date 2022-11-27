@@ -33,8 +33,8 @@ export default function List(){
   
     return (
       <View>
-        <Pressable  style={theme.addContactButton}  onPress={()=>navigation.navigate("Create")}>
-            <Text style={theme.addContactButtonText}>+ ADD STAFF</Text>
+        <Pressable  style={theme.addStaffBtn}  onPress={()=>navigation.navigate("Create")}>
+            <Text style={theme.addStaffBtnTxt}>+ ADD STAFF</Text>
         </Pressable>
         {users.map(u=><User key={u.id} user={u}/>)}   
       </View>

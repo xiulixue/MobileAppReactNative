@@ -7,15 +7,15 @@ export default function User(props){
     const navigation = useNavigation(); 
     let u = props.user; 
     return (
-        <View style={theme.userTile}>
+        <Pressable  onPress={()=>navigation.navigate("Profiles",u)}>
+        <View style={theme.listRow}>
             <View>
-                <Text>{u.firstName} {u.lastName}</Text>
+                <Text style={{fontFamily:'Trebuchet',fontWeight:'bold',fontSize:16}}>{u.firstName} {u.lastName} | {u.department}</Text>
+                <Text style={{fontFamily:'Trebuchet',fontSize:10}}>{u.phone} </Text>
             </View>
-            <View style={{backgroundColor:'white',display:'flex',flexDirection:'row',justifyContent:'flex-end'}}>
-                <Pressable  style={theme.userTileButton} onPress={()=>navigation.navigate("Details",u)}>
-                    <Text  style={theme.userTileButtonText}>Details</Text>
-                </Pressable>
-            </View>      
+            <View style={theme.listRowBtnContainer}>
+            </View> 
         </View>
+        </Pressable> 
     ); 
 }
