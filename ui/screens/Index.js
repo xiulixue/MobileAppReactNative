@@ -1,5 +1,4 @@
 import {Text, View,Pressable } from 'react-native';
-import {Image} from 'react-native';
 import {useNavigation} from '@react-navigation/native'; 
 import logo from '../assets/logo.png';
 import theme from '../style';
@@ -26,7 +25,7 @@ export default function Index(){
             <Text style={theme.indexNavBtnTxt}> ACTIVITY </Text>
         </Pressable> 
         <Pressable  style={theme.indexNavBtn}  onPress={()=>navigation.navigate("Index")}>
-            <Text style={theme.indexNavBtnTxt}> SETTING </Text>
+            <Text style={theme.indexNavBtnTxt}> SETTINGS </Text>
         </Pressable>
         <Pressable  style={theme.indexNavBtn}  onPress={()=>navigation.navigate("Index")}>
             <Text style={theme.indexNavBtnTxt}> LOG OUT </Text>

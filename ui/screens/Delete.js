@@ -33,7 +33,7 @@ export default function Delete(){
         <Label value="DEPARTMENT:" />
         <Text style={theme.txtDetail}>{u.department} </Text>
         <Label value="ADDRESS:" />
-        <Text style={theme.txtDetail}>{`${u.address.street}, ${u.address.suburb}, ${u.address.state}` }</Text>
+        <Text style={theme.txtDetail}>{`${u.address.street}, ${u.address.suburb}, ${u.address.state},${u.address.country}` }</Text>
         <Text style={theme.deleteStaffNtfTxt}>Are You Sure To Delete This Staff ?</Text>
         <Pressable style={theme.deleteStaffBtn} onPress={submit}>
           <Text style={theme.deleteStaffBtnTxt}>DELETE</Text>
