@@ -1,11 +1,9 @@
 import {Text, View,Pressable } from 'react-native';
-import {useNavigation} from '@react-navigation/native'; 
 import logo from '../assets/logo.png';
 import theme from '../style';
 
-export default function Index(){
+export default function Index({ navigation }){
     //navigation
-    const navigation  = useNavigation(); 
     
     return (
       <View>

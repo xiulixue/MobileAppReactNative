@@ -1,13 +1,10 @@
 import { Text, View,Pressable } from 'react-native';
-import { useNavigation,useRoute } from '@react-navigation/native'; 
 import {deleteUserAsync} from '../services/user.service'; 
 import theme from '../style';
 import Label from "../components/Label";
 
-export default function Delete(){
-    //navigation
-    const navigation  = useNavigation(); 
-    const route = useRoute(); 
+export default function Delete({ navigation , route }){
+    //navigation 
     const u = route.params; 
     //functions
     function submit(){

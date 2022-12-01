@@ -2,16 +2,14 @@
 
 import { useState } from "react";
 import { Text, View, TextInput, Pressable } from "react-native";
-import { useNavigation, useRoute } from "@react-navigation/native";
 import TxtInput from "../components/TxtInput";
 import Label from "../components/Label";
 import { updateUserAsync } from "../services/user.service";
 import theme from "../style";
 
-export default function Edit() {
+export default function Edit( { navigation , route }) {
   //navigation
-  const navigation = useNavigation();
-  const route = useRoute();
+
   const user = route.params;
   //state
   const [staffId, setStaffId] = useState(user.staffId);

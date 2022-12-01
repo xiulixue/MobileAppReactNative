@@ -2,15 +2,12 @@
 
 import { useState } from "react";
 import { Text, View, Pressable } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 import { addUserAsync } from "../services/user.service";
 import theme from "../style";
 import Label from "../components/Label";
 import TxtInput from "../components/TxtInput";
 
-export default function Create() {
-  //navigation
-  const navigation = useNavigation();
+export default function Create({ navigation }) {
   //state
   const [staffId, setStaffId] = useState("");
   const [firstName, setFirstName] = useState("");

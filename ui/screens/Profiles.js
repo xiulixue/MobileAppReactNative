@@ -1,12 +1,9 @@
 import { Text, View, Pressable} from 'react-native';
-import { useNavigation,useRoute } from '@react-navigation/native'; 
 import theme from '../style';
 import Label from '../components/Label';
 
-export default function Profiles(){
+export default function Profiles( { navigation , route }){
     //navigation
-    const navigation  = useNavigation(); 
-    const route = useRoute(); 
     const u = route.params; 
     //JSX
     return (

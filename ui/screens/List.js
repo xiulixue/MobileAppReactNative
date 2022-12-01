@@ -1,14 +1,11 @@
 import {useEffect,useState} from 'react'; 
 import {Text, View,Pressable } from 'react-native';
-import {useNavigation,useRoute} from '@react-navigation/native'; 
 import {fetchUsersAsync} from '../services/user.service'
 import User from '../components/User';
 import theme from '../style';
 
-export default function List(){
+export default function List({ navigation, route }){
     //navigation
-    const navigation  = useNavigation(); 
-    const route = useRoute(); 
     //state
     const [users,setUsers] = useState([]); 
     //use effect
