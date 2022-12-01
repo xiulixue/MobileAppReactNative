@@ -5,6 +5,7 @@ const theme = StyleSheet.create({
     logoImg:{
         margin:5,
         marginBottom:10,
+        borderRadius:20,
     },
 
     //index page 
